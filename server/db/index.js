@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
 
+const db_url = process.env.MONGODB_URL;
+
 mongoose
-    .connect('mongodb://127.0.0.1:27017/cinema', {useNewUrlParser: true })
+    .connect(db_url, {useNewUrlParser: true })
     .catch(e => {
         console.error('Connection error', e.message)
     })
