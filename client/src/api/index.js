@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:8000/api',
+    baseURL: 'https://node-test-korey.herokuapp.com/api',
 })
 
 export const insertMovie = payload => api.post(`/movie`, payload)
